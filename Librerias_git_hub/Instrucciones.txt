@@ -1,0 +1,4 @@
+En la página del repositorio en GitHub, pulsa el botón verde Code y luego Download ZIP.
+Abre Arduino IDE 2 y ve a Sketch → Incluir librería → Añadir biblioteca .ZIP.... En inglés es Sketch → Include Library → Add .ZIP Library....
+Selecciona el ZIP que descargaste, sin descomprimirlo.
+Cuando termine, la librería aparece en Sketch → Incluir librería, al final de la lista, y en Archivo → Ejemplos.
