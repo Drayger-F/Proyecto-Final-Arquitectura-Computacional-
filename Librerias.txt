@@ -1,0 +1,13 @@
+
+<<<<<<<Librerias>>>>>>>>>>>>>>>
+1.statemachinelib de Luis llamas
+2.asynctasklib de Luis llamas
+3.Average(Libreria matematica es un .zip)
+4.MFRC522 de miguel balboa
+5.arduino-songs(ERROR .zip no sirve y no se como se llama el repositorio para añadirlo directamente)
+6.keypad
+7,LiquidCrystal by adafruit
+8.Servo by michael (No estoy seguro)
+9.LiquidMenu
+
+
