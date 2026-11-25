@@ -1,1 +1,121 @@
+CONEXIONES PARA ARDUINO MEGA 2560 SOLAMENTE
 
+PINES DEL TECLADO 4X4
+
+Filas:
+Pin 9  -> Fila 1
+Pin 8  -> Fila 2
+Pin 7  -> Fila 3
+Pin 6  -> Fila 4
+
+Columnas:
+Pin 5  -> Columna 1
+Pin 4  -> Columna 2
+Pin 3  -> Columna 3
+Pin 2  -> Columna 4
+
+Mapa de teclas:
+Fila 1: 1, 2, 3, A
+Fila 2: 4, 5, 6, B
+Fila 3: 7, 8, 9, C
+Fila 4: *, 0, #, D
+
+El teclado no lleva VCC ni GND. Solo usa las 8 líneas de filas y columnas.
+
+SERVO DE LA CERRADURA
+
+Pin 10 -> señal del servo
+VCC del servo -> fuente externa de 5 V recomendada
+GND del servo -> GND común con el Arduino Mega
+
+BUZZER
+
+Pin 11 -> positivo del buzzer
+GND -> negativo del buzzer
+
+LED ROJO
+
+Pin 12 -> ánodo del LED con resistencia de 220 a 330 ohmios
+GND -> cátodo del LED
+
+LED AZUL
+
+Pin 13 -> ánodo del LED con resistencia de 220 a 330 ohmios
+GND -> cátodo del LED
+Nota: el pin 13 también es el LED integrado de la placa Mega.
+
+VENTILADOR O RELÉ
+
+A0 -> entrada IN del módulo relé o base del transistor
+No conectar el ventilador directamente a A0
+A0 se usa como salida digital
+El relé debe tener su propia alimentación si maneja cargas grandes
+GND común entre Arduino Mega, relé y fuente
+
+SENSOR DHT11
+
+A1 -> DATA del DHT11
+VCC -> 5 V
+GND -> GND
+Se recomienda resistencia pull-up de 10 kΩ entre DATA y VCC
+
+SENSOR DE PUERTA O REED SWITCH
+
+A2 -> un terminal del reed o sensor
+GND -> otro terminal
+El código usa INPUT_PULLUP:
+Puerta cerrada -> LOW
+Puerta abierta -> HIGH
+
+SENSOR DE FUEGO O LLAMA
+
+A3 -> salida digital DO del sensor
+VCC -> 5 V
+GND -> GND
+El código interpreta LOW como fuego detectado
+
+BOTÓN DE DESBLOQUEO
+
+Pin 22 -> un terminal del botón
+GND -> otro terminal
+El código usa INPUT_PULLUP:
+Botón pulsado -> LOW
+Este botón se usa para salir del estado BLOQUEO en la Mega 2560.
+
+LCD I2C 16x2
+
+En Arduino Mega 2560:
+SDA -> pin 20
+SCL -> pin 21
+VCC -> 5 V
+GND -> GND
+Dirección I2C usada en el código: 0x27
+Si no funciona, probar dirección 0x3F
+
+PUERTO SERIE
+
+Pin 0 -> RX
+Pin 1 -> TX
+Se usan para el monitor serie y el USB
+No conectar módulos externos ahí si se usa el monitor serie por USB
+
+RESUMEN DE PINES PARA MEGA 2560
+
+Teclado filas: 9, 8, 7, 6
+Teclado columnas: 5, 4, 3, 2
+Servo: 10
+Buzzer: 11
+LED rojo: 12
+LED azul: 13
+Ventilador o relé: A0
+DHT11: A1
+Puerta o reed: A2
+Fuego o llama: A3
+LCD I2C SDA: 20
+LCD I2C SCL: 21
+Botón de desbloqueo: 22
+Serial RX: 0
+Serial TX: 1
+
+Todos los módulos deben compartir GND común con el Arduino Mega 2560.
+Los pines A0, A1, A2 y A3 se usan en este código como entradas o salidas digitales, no como entradas analógicas.
